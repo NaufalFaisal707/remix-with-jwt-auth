@@ -14,6 +14,17 @@ npx prisma init
 npx prisma push db
 ```
 
+## Konfigurasi ENV
+```bash
+# simpan dan ubah konfigurasi tanbahan ini pada file .env
+
+JWT_SESSION_SECRET=secret_key
+JWT_SESSION_EXP=expired_access_token_in_milliseconds
+
+JWT_REFRESH_SECRET=secret_key
+JWT_REFRESH_EXP=expired_refresh_token_in_milliseconds
+```
+
 ## Penggunaan
 ### Development
 ```bash
