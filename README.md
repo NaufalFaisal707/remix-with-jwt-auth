@@ -1,7 +1,7 @@
 # Remix With JWT Auth
 
 ## Deskripsi
-Implementasi autentikasi sederhana dengan JWT untuk aplikasi Remix
+implementasi konfigurasi sederhana untuk melakukan autentikasi JWT pada framework Remix
 
 ## Instalasi Depedensi
 ```bash
