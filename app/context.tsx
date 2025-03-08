@@ -3,6 +3,7 @@ import { createContext, useContext } from "react";
 
 type User = {
   id: string;
+  username: string;
   full_name: string;
   logout: boolean;
   create_at: Date;

@@ -5,6 +5,12 @@ import {
 } from "@remix-run/node";
 import { PrismaClient } from "@prisma/client";
 
+type CustomJWTObject = {
+  id: string;
+  iat: number;
+  exp: number;
+};
+
 type CustomContext = {
   context: {
     prisma: PrismaClient;
@@ -14,8 +20,8 @@ type CustomContext = {
     clearRefreshCookie: Cookie;
     generateAccessToken: (value: string) => string;
     generateRefreshToken: (value: string) => string;
-    verifyAccessToken: (token: string) => object | null;
-    verifyRefreshToken: (token: string) => object | null;
+    verifyAccessToken: (token: string) => CustomJWTObject | null;
+    verifyRefreshToken: (token: string) => CustomJWTObject | null;
   };
 };
 

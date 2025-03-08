@@ -31,6 +31,7 @@ export const loader = async ({
       select: {
         id: true,
         full_name: true,
+        username: true,
         logout: true,
         created_at: true,
         logout_at: true,
@@ -57,6 +58,7 @@ export const loader = async ({
       select: {
         id: true,
         full_name: true,
+        username: true,
         logout: true,
         created_at: true,
         logout_at: true,

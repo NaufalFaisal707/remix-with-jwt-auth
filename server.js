@@ -27,6 +27,13 @@ const prisma = new PrismaClient().$extends({
         args.data.password = await hash(args.data.password, 10);
         return query(args);
       }
+
+      if (operation === "update" && model === "User" && args.data?.password) {
+        console.log("password updated!");
+        args.data.password = await hash(args.data.password, 10);
+        return query(args);
+      }
+
       return await query(args);
     },
   },
