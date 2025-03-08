@@ -1,7 +1,9 @@
-import { Form, Link } from "@remix-run/react";
+import { Form, Link, MetaFunction } from "@remix-run/react";
 import Container2xl from "~/components/container-2xl";
 import { Button } from "~/components/ui/button";
 import { useUser } from "~/context";
+
+export const meta: MetaFunction = () => [{ title: "Berhasil login!" }];
 
 export default function RIndex() {
   const user = useUser();
